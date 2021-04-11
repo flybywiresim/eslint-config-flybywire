@@ -14,7 +14,11 @@ module.exports = {
         'no-restricted-syntax': 'off',
         'quote-props': ['error', 'consistent-as-needed'],
         'strict': ['error', 'global'],
-        'object-curly-newline': ['error', { multiline: true }],
+
+        // object literals
+        'object-curly-newline': ['error', { multiline: true, consistent: true }],
+        'object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
+        'object-shorthand': ['error'],
 
         'no-case-declarations': 'off',
 
@@ -22,7 +26,6 @@ module.exports = {
         'no-plusplus': 'off',
         'no-shadow': 'off',
         'no-continue': 'off',
-
         'radix': 'off',
 
         // Avoid typescript-eslint conflicts
@@ -48,6 +51,14 @@ module.exports = {
         'react/destructuring-assignment': 'off',
         'react/jsx-props-no-spreading': 'off',
         'react/no-unescaped-entities': 'off',
+
+        // react
+        'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
+        'react/jsx-handler-names': ['error', {
+            eventHandlerPrefix: 'on|handle',
+            eventHandlerPropPrefix: 'on',
+            checkLocalVariables: true,
+        }],
 
         // Not needed with react 17+
         'react/jsx-uses-react': 'off',

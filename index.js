@@ -1,5 +1,6 @@
 module.exports = {
     extends: 'airbnb',
+    plugins: ['@typescript-estlint', 'react-hooks']
     // Overrides airbnb, use sparingly
     rules: {
         'arrow-parens': ['error', 'always'],
@@ -59,6 +60,8 @@ module.exports = {
             eventHandlerPropPrefix: 'on',
             checkLocalVariables: true,
         }],
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'warn',
 
         // Not needed with react 17+
         'react/jsx-uses-react': 'off',

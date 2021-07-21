@@ -1,6 +1,6 @@
 module.exports = {
     extends: 'airbnb',
-    plugins: ['@typescript-estlint', 'react-hooks']
+    plugins: ['@typescript-estlint', 'react-hooks'],
     // Overrides airbnb, use sparingly
     rules: {
         'arrow-parens': ['error', 'always'],
